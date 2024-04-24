@@ -1,9 +1,30 @@
 <html>
 <head>
+<title>Styled Lists</title>
+<style> 
+  ul {
+    list-style: none;      /*removes the default bullet*/
+    margin-left: 3%;       /*gives the bullet a small left margin*/
+    padding-left: 1.2em;   /*sets the list text to the right*/
+    text-indent: -1.2em;   /*indents the list text*/
+}
+  li:before {                /*puts the Unicode before the text*/
+    content: "\1F60E";      /*designate the Unicode character's number*/
+    font-size: large;       /*control the bullet size*/
+    color: #d9534f;         /*control the symbol color*/
+    margin-right: .5em;     /*give a small margin to the Unicode*/
+}
+ li {
+    padding: .2em;          /*space between the Unicode and the text*/
+}
+</style> 
+</head>
 <body>
-<ul>
-<li>sem I</li>
-<li>sem II</li>
-<li>sem III<li>
-<li>sem IV<li>
-</UL>
+    <p>My Coffee Lovers HTML list</p>
+    <ul>
+      <li>Coffee</li>
+      <li>Black Coffee</li>
+      <li>More Black Coffee</li>
+    </ul>
+</body>
+</html>
