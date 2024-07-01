@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <label for="player-choice">Player Choice:</label>
+    <label id="player-choice"></label><br>
+    <label for="computer-choice">Computer Choice:</label>
+    <label id="computer-choice"></label><br>
+    <label for="result">Result:</label>
+    <label id="result"></label><br>
+    <button onclick="playRound()">Play</button>
+    <script>
+        const choices = ["rock", "paper", "scissors"];
+
+        function playRound() {
+            const playerChoiceIndex = Math.floor(Math.random() * choices.length);
+            const computerChoiceIndex = Math.floor(Math.random() * choices.length);
+            
+            const playerChoice = choices[playerChoiceIndex];
+            const computerChoice = choices[computerChoiceIndex];
+            
+            document.getElementById("player-choice").innerText = playerChoice;
+            document.getElementById("computer-choice").innerText = computerChoice;
+
+            let result = "";
+
+            if (playerChoice === computerChoice) {
+                result = "It's a draw!";
+            } else if (
+                (playerChoice === "rock" && computerChoice === "scissors") ||
+                (playerChoice === "paper" && computerChoice === "rock") ||
+                (playerChoice === "scissors" && computerChoice === "paper")
+            ) {
+                result = "You Win!";
+            } else {
+                result = "You Lose!";
+            }
+
+            document.getElementById("result").innerText = result;
+        }
+    </script>
+</body>
+</html>

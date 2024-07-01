@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial;}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f1f1f1;
+  padding: 10px;
+  font-family: Arial;
+}
+
+/* Center website */
+.main {
+  max-width: 10000px;
+  margin:auto;
+}
+
+
+.row {
+  margin: 10px -20px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 2px;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  display: none; /* Hide all elements by default */
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 5px;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+  display: block;
+}
+
+/* Style the buttons */
+.btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #ddd;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.navbar {
+  width: 100%;
+  background-color: #555;
+  overflow: auto;
+}
+
+.navbar a {
+  float: left;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #000;
+}
+
+.active {
+  background-color: #04AA6D;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.navbar a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+.navbar .search-container {
+  float: right;
+}
+
+.navbar input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.navbar .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.navbar .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar .search-container {
+    float: none;
+  }
+  .navbar a, .navbar input[type=text], .navbar .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;  
+  }
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+
+        header{
+            background-color: #c1a2b1;
+        }
+        footer
+        {
+            background-color: #1e1c1c;
+        }
+        section{
+            background-image: linear-gradient(to right, #ffefba, #ffffff);  
+        }
+        #logo{
+            width: 30px;
+            height: 30px;
+            
+        }
+        #companyname{
+            display: flex;
+        }
+        nav a{
+            color:rgb(180, 15, 15);
+            
+            }
+        
+         nav{
+            margin-left: 1000px;
+        
+        }
+        .instruments{
+            width: 250px;
+            height: 300px;
+        }
+        .socialmedia{
+            width: 50px;
+            height: 50px;
+            border-radius: 25px;
+        }
+        .rowimg
+        {
+            border: 1px solid red;
+            border-radius: 50%;
+        }
+        .forsale
+        {
+            width: 250px;
+            height: 300px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="navbar">
+  
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+<div style="padding-left:16px"></div>
+<div class="navbar">
+  <a class="active" href="#home"><i class="fa fa-fw fa-home"></i> Home</a> 
+  <a href="#about"><i class="fa fa-fw fa-envelope"></i> ABOUT US</a> 
+  <a href="#instruments"><i class="fa fa-fw fa-user"></i> INSTRUMENTS</a>
+  <a href="#"><i class= search-container"></i>
+</div>
+  
+<body>
+    <section id="home">
+        <div id="home"></div>
+
+        </section>
+    <div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="https://yamaha.ndcdn.in/media/wysiwyg/MIN-guitars-desktop-8mar24.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="https://yamaha.ndcdn.in/media/wysiwyg/PSR-E383-desktop-new-24may24.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://yamaha.ndcdn.in/media/wysiwyg/banner_desk_27_01.jpg" style="width:100%">
+  
+</div>
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="https://yamaha.ndcdn.in/media/wysiwyg/violin-desktop.jpg" style="width:100%">
+</div>
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+  <span class="dot" onclick="currentSlide(4)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+   
+  <section id= "home">
+
+
+    <div id="imgscroll">
+     
+    </div>
+
+  </section>
+
+
+<section id="instruments">
+    <div id="instruments">
+  <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+  <button class="btn" onclick="filterSelection('keyboard')"> keyboard</button>
+  <button class="btn" onclick="filterSelection('guitar')"> acoustic guitar</button>
+  <button class="btn" onclick="filterSelection('electric guitar')"> electric guitar</button>
+  <button class="btn" onclick="filterSelection('bass guitar')"> bass guitar</button>
+  <button class="btn" onclick="filterSelection('drums')"> drums</button>
+  <button class="btn" onclick="filterSelection('violine')"> violin</button>
+</div>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column keyboard">
+    <div class="content">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFhoPPEA1bzgO0a0FFpM-CqaQJ7oFKcRXfSEUsdS0647HTOJXrWIZKlZVMjIDpJTL9QVo&usqp=CAU"; alt="keyboard" style="width:60%">
+      <h4>Yamaha PSR-A5000</h4>
+      <p>10,000</p>
+      <audio controls>
+  <source src="piano.m4a" type="audio/ogg">
+  <source src="piano.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    </div>
+  </div>
+  
+  <div class="column guitar">
+    <div class="content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm5Mv-_gWq6kuBiBVG6MIbGi9h_ElaqVCTyw&s" alt="acoustic guitar" style="width:60%">
+      <h4>Yamaha APX600</h4>
+      <p>15,000</p>
+      <audio controls>
+  <source src="acoustic.m4a" type="audio/ogg">
+  <source src="acoustic.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+      
+    </div>
+  </div>
+  <div class="column drums">
+    <div class="content">
+    <img src="https://5.imimg.com/data5/ANDROID/Default/2021/2/MB/VU/UN/101604795/product-jpeg-500x500.jpg" alt="drums" style="width:60%">
+      <h4>yamaha drums</h4>
+      <p>23,000</p>
+      <audio controls>
+  <source src="drums.m4a" type="audio/ogg">
+  <source src="drums.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    </div>
+  </div>
+  
+  <div class="column electric guitar">
+    <div class="content">
+      <img src="https://musicshopnepal.com/wp-content/uploads/2020/10/1558433317701-123.RGX121Z-BLACK.3-scaled.jpg" alt="electric guitar" style="width:36%">
+      <h4>Electric guitar</h4>
+      <p>29,999</p>
+      <audio controls>
+  <source src="E-guitar.m4a" type="audio/ogg">
+  <source src="E-guitar.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    </div>
+  </div>
+  <div class="column bass guitar">
+    <div class="content">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZaMw7bXhmwRVClvuPDXtJKF8okbQphXoSng&s" alt="bass guitar" style="width:83%">
+      <h4>Black E-bass guitar</h4>
+      <p>19,000</p>
+      <audio controls>
+  <source src="e-bass.m4a" type="audio/ogg">
+  <source src="e-bass.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    </div>
+  </div>
+  <div class="column violin">
+    <div class="content">
+      <img src="https://yamaha.ndcdn.in/media/catalog/product/cache/9dc1522ad3a7607391f539810e42a604/v/1/v10sg_1.jpg"; alt="violin" style="width:37%">
+      <h4>Yamaha V10SG VIOLIN</h4>
+      <p>122,990</p>
+      <audio controls>
+  <source src="violine.m4a" type="audio/ogg">
+  <source src="violine.m4a" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+    </div>
+  </div>  
+<!-- END GRID -->
+</div>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+filterSelection("all")
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+  }
+}
+
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);     
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>
+    
+ 
+<footer>
+    <section id="About us"></section>
+    <div id="about"></div>
+    <h1>ABOUT US</h1>
+    Welcome to our shop, your ultimate destination for high-quality musical instruments and accessories. Whether you're a beginner eager to start your musical journey or a seasoned professional seeking top-notch gear, we have something for everyone. Our extensive selection includes everything from guitars and pianos to drums and violins, all from trusted brands known for their exceptional craftsmanship. 
+    We pride ourselves on offering competitive prices, exclusive deals, and a satisfaction guarantee to ensure you find the perfect instrument to match your needs. Explore our range of products,
+     take advantage of our expert advice, and enjoy free shipping and easy returns on all orders. At our shop, we're not just selling instruments; we're nurturing a community of passionate musicians.
+     <h3>VISIT AGAIN,THANK YOU</h3>
+     </footer>
+     
+
+</body>
+</html>
+</style>
+</head>
+
+</body>
+</html> 
